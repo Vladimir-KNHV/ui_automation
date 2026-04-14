@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
+  workflow_dispatch:   # 👈 ВОТ ЭТО ДОБАВЛЯЕТ РУЧНОЙ ЗАПУСК
 
 jobs:
   test:
@@ -18,13 +19,13 @@ jobs:
       - name: Build Docker image
         run: docker build -t selenium-tests .
 
-      # 3. Запускаем тесты в контейнере
+      # 3. Запускаем тесты в Docker
       - name: Run tests in Docker
         run: |
           docker run --name tests-container selenium-tests
         continue-on-error: true
 
-      # 4. Копируем Allure results из контейнера
+      # 4. Копируем Allure results
       - name: Copy Allure results
         if: always()
         run: |
@@ -41,7 +42,7 @@ jobs:
         if: always()
         run: docker rm tests-container || true
 
-      # 7. Загружаем Allure results как artifact
+      # 7. Upload Allure results
       - name: Upload Allure results
         if: always()
         uses: actions/upload-artifact@v4
@@ -49,7 +50,7 @@ jobs:
           name: allure-results
           path: allure-results
 
-      # 8. Загружаем логи как artifact
+      # 8. Upload logs
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4

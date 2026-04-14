@@ -53,7 +53,7 @@ class OrderPageLocators:
     COMMENT = (By.CSS_SELECTOR, '[id="order_comment"]')
     DELIVERY_TIME = (By.CSS_SELECTOR, '[id="delivery-time-intervals-select"]')
     EMAIL = (By.CSS_SELECTOR, '[id="client_email"]')
-    NOTIFICATION_CHECKBOX = (By.CSS_SELECTOR,'.co-toggable_field[for="client_messenger_subscription_1"]') # добавил ошибку в локатор _1
+    NOTIFICATION_CHECKBOX = (By.CSS_SELECTOR,'.co-toggable_field[for="client_messenger_subscription_1"]') #   добавил ошибку в локатор _1
     DATE = (By.CSS_SELECTOR, '[id="delivery-date-calendar"]')
     DAY = (By.CSS_SELECTOR, '[class="rd-day-body"]')
     SPINNER = (By.CSS_SELECTOR, ".spinner.slide-up")

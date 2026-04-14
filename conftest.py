@@ -20,7 +20,7 @@ def browser():
 
     driver = webdriver.Chrome(options=options)
     yield driver
-    time.sleep(10)
+    # time.sleep(10)
     print('Browser quit')
     driver.quit()  
 
