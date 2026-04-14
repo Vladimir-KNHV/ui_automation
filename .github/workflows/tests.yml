@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-  workflow_dispatch:   # 👈 ВОТ ЭТО ДОБАВЛЯЕТ РУЧНОЙ ЗАПУСК
+  workflow_dispatch:   # ручной запуск из GitHub
 
 jobs:
   test:
@@ -19,30 +19,26 @@ jobs:
       - name: Build Docker image
         run: docker build -t selenium-tests .
 
-      # 3. Запускаем тесты в Docker
+      # 3. Запускаем тесты (ВАЖНО: без continue-on-error)
       - name: Run tests in Docker
-        run: |
-          docker run --name tests-container selenium-tests
-        continue-on-error: true
+        run: docker run --name tests-container selenium-tests
 
-      # 4. Копируем Allure results
+      # 4. Копируем Allure results (даже если тест упал)
       - name: Copy Allure results
         if: always()
-        run: |
-          docker cp tests-container:/app/allure-results ./allure-results || true
+        run: docker cp tests-container:/app/allure-results ./allure-results || true
 
       # 5. Копируем логи
       - name: Copy logs
         if: always()
-        run: |
-          docker cp tests-container:/app/logs ./logs || true
+        run: docker cp tests-container:/app/logs ./logs || true
 
       # 6. Удаляем контейнер
       - name: Cleanup container
         if: always()
         run: docker rm tests-container || true
 
-      # 7. Upload Allure results
+      # 7. Загружаем Allure results как artifact
       - name: Upload Allure results
         if: always()
         uses: actions/upload-artifact@v4
@@ -50,7 +46,7 @@ jobs:
           name: allure-results
           path: allure-results
 
-      # 8. Upload logs
+      # 8. Загружаем логи как artifact
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
