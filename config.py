@@ -1,0 +1,1 @@
+BASE_URL = "https://upstore24.ru/"

@@ -1,0 +1,53 @@
+name: Selenium Tests (Docker)
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Код
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Docker build
+      - name: Build Docker image
+        run: docker build -t selenium-tests .
+
+      # 3. Запуск тестов в Docker
+      - name: Run tests in Docker
+        run: |
+          docker run --name tests-container selenium-tests
+
+      # 4. Забрать allure-results из контейнера
+      - name: Copy allure results
+        run: |
+          docker cp tests-container:/app/allure-results ./allure-results || true
+
+      # 5. Забрать logs
+      - name: Copy logs
+        run: |
+          docker cp tests-container:/app/logs ./logs || true
+
+      # 6. Удалить контейнер
+      - name: Cleanup container
+        run: |
+          docker rm tests-container || true
+
+      # 7. Upload Allure
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+
+      # 8. Upload logs
+      - name: Upload logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs
+          path: logs

@@ -1,0 +1,148 @@
+14-04-2026 17:20:01 | INFO | OPEN page
+14-04-2026 17:20:05 | INFO | --------------------------------
+14-04-2026 17:20:05 | INFO | METHOD Go to katalog
+14-04-2026 17:20:05 | INFO | --------------------------------
+14-04-2026 17:20:05 | INFO | MULTI-CLICK on element: [class="nav-item js-nav-item"] [href="/collection/all"]
+14-04-2026 17:20:05 | INFO | WAIT for element: [class="nav-item js-nav-item"] [href="/collection/all"]
+14-04-2026 17:20:05 | INFO | SCROLL to element
+14-04-2026 17:20:07 | INFO | SCRIPT CLICK on element: [class="nav-item js-nav-item"] [href="/collection/all"]
+14-04-2026 17:20:07 | INFO | --------------------------------
+14-04-2026 17:20:07 | INFO | METHOD Should be katalog word
+14-04-2026 17:20:07 | INFO | --------------------------------
+14-04-2026 17:20:07 | INFO | SHOULD be text
+14-04-2026 17:20:07 | INFO | --------------------------------
+14-04-2026 17:20:07 | INFO | METHOD Go to smartphone page
+14-04-2026 17:20:07 | INFO | --------------------------------
+14-04-2026 17:20:07 | INFO | MULTI-CLICK on element: [class="subcollection_card-thumb subcollection_card-thumb--1x1 subcollection_card-thumb--contain"]
+14-04-2026 17:20:07 | INFO | WAIT for element: [class="subcollection_card-thumb subcollection_card-thumb--1x1 subcollection_card-thumb--contain"]
+14-04-2026 17:20:07 | INFO | SCROLL to element
+14-04-2026 17:20:10 | INFO | CLICK on element: [class="subcollection_card-thumb subcollection_card-thumb--1x1 subcollection_card-thumb--contain"]
+14-04-2026 17:20:10 | INFO | --------------------------------
+14-04-2026 17:20:10 | INFO | METHOD Should be smartphone word
+14-04-2026 17:20:10 | INFO | --------------------------------
+14-04-2026 17:20:10 | INFO | SHOULD be text
+14-04-2026 17:20:10 | INFO | --------------------------------
+14-04-2026 17:20:10 | INFO | METHOD Select filter
+14-04-2026 17:20:10 | INFO | --------------------------------
+14-04-2026 17:20:10 | INFO | MULTI-CLICK on element: [id="filter-value-175885426"]
+14-04-2026 17:20:10 | INFO | WAIT for element: [id="filter-value-175885426"]
+14-04-2026 17:20:10 | INFO | SCROLL to element
+14-04-2026 17:20:11 | INFO | SCRIPT CLICK on element: [id="filter-value-175885426"]
+14-04-2026 17:20:12 | INFO | --------------------------------
+14-04-2026 17:20:12 | INFO | METHOD Select filter
+14-04-2026 17:20:12 | INFO | --------------------------------
+14-04-2026 17:20:12 | INFO | MULTI-CLICK on element: [id="filter-value-109849128"]
+14-04-2026 17:20:12 | INFO | WAIT for element: [id="filter-value-109849128"]
+14-04-2026 17:20:12 | INFO | SCROLL to element
+14-04-2026 17:20:12 | INFO | SCRIPT CLICK on element: [id="filter-value-109849128"]
+14-04-2026 17:20:13 | INFO | SHOULD be url
+14-04-2026 17:20:13 | INFO | --------------------------------
+14-04-2026 17:20:13 | INFO | METHOD Go to product page
+14-04-2026 17:20:13 | INFO | --------------------------------
+14-04-2026 17:20:13 | INFO | WAIT for clickable: [class="product_card-thumb product_card-thumb--1x1 product_card-thumb--contain"]
+14-04-2026 17:20:13 | INFO | MULTI-CLICK on element: [class="product_card-thumb product_card-thumb--1x1 product_card-thumb--contain"]
+14-04-2026 17:20:13 | INFO | WAIT for element: [class="product_card-thumb product_card-thumb--1x1 product_card-thumb--contain"]
+14-04-2026 17:20:13 | INFO | SCROLL to element
+14-04-2026 17:20:16 | INFO | CLICK on element: [class="product_card-thumb product_card-thumb--1x1 product_card-thumb--contain"]
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | METHOD Should be description word
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | SHOULD be text
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | METHOD Get product name
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | WAIT for element: [class="product-title"]
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | METHOD Get product price
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | WAIT for element: .product-prices .product-price
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | METHOD Add to basket
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | MULTI-CLICK on element: [class="button button--primary button--block button--medium"]
+14-04-2026 17:20:16 | INFO | WAIT for element: [class="button button--primary button--block button--medium"]
+14-04-2026 17:20:16 | INFO | SCROLL to element
+14-04-2026 17:20:16 | INFO | CLICK on element: [class="button button--primary button--block button--medium"]
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | METHOD Go to basket
+14-04-2026 17:20:16 | INFO | --------------------------------
+14-04-2026 17:20:16 | INFO | MULTI-CLICK on element: [class="button button--primary button--block button--large"]
+14-04-2026 17:20:16 | INFO | WAIT for element: [class="button button--primary button--block button--large"]
+14-04-2026 17:20:17 | INFO | SCROLL to element
+14-04-2026 17:20:18 | INFO | CLICK on element: [class="button button--primary button--block button--large"]
+14-04-2026 17:20:18 | INFO | --------------------------------
+14-04-2026 17:20:18 | INFO | METHOD Should be basket word
+14-04-2026 17:20:18 | INFO | --------------------------------
+14-04-2026 17:20:18 | INFO | SHOULD be text
+14-04-2026 17:20:18 | INFO | --------------------------------
+14-04-2026 17:20:18 | INFO | METHOD Submit offer
+14-04-2026 17:20:18 | INFO | --------------------------------
+14-04-2026 17:20:18 | INFO | MULTI-CLICK on element: [class="button button--primary button--block button--large"]
+14-04-2026 17:20:18 | INFO | WAIT for element: [class="button button--primary button--block button--large"]
+14-04-2026 17:20:18 | INFO | SCROLL to element
+14-04-2026 17:20:21 | INFO | CLICK on element: [class="button button--primary button--block button--large"]
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | METHOD Get order product name
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | WAIT for element: [class="co-basket_item-description"]
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | METHOD Get total price
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | WAIT for clickable: total_price
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | METHOD Fill full order form
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | METHOD Fill name
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | TYPE 'Захар' into [id="client_contact_name"]
+14-04-2026 17:20:22 | INFO | WAIT for clickable: [id="client_contact_name"]
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | METHOD Fill phone
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | TYPE '7091017219' into [id="client_phone"]
+14-04-2026 17:20:22 | INFO | WAIT for clickable: [id="client_phone"]
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | METHOD Fill city
+14-04-2026 17:20:22 | INFO | --------------------------------
+14-04-2026 17:20:22 | INFO | WAIT for clickable: [id="shipping_address_full_locality_name"]
+14-04-2026 17:20:23 | INFO | WAIT for spinner
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | METHOD Select delivery
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | MULTI-CLICK on element: [for="order_delivery_variant_id_8609044"]
+14-04-2026 17:20:24 | INFO | WAIT for element: [for="order_delivery_variant_id_8609044"]
+14-04-2026 17:20:24 | INFO | SCROLL to element
+14-04-2026 17:20:24 | INFO | CLICK on element: [for="order_delivery_variant_id_8609044"]
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | METHOD Fill address
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | TYPE 'пр. Минина, д. 765 к. 977' into [id="shipping_address_address"]
+14-04-2026 17:20:24 | INFO | WAIT for clickable: [id="shipping_address_address"]
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | METHOD Fill comment
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | TYPE 'Монета бетонный.' into [id="order_comment"]
+14-04-2026 17:20:24 | INFO | WAIT for clickable: [id="order_comment"]
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | METHOD Select date
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | WAIT for clickable: [id="delivery-date-calendar"]
+14-04-2026 17:20:24 | INFO | SCROLL to element
+14-04-2026 17:20:24 | INFO | WAIT for clickable: [class="rd-day-body"]
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | METHOD Select time
+14-04-2026 17:20:24 | INFO | --------------------------------
+14-04-2026 17:20:24 | INFO | WAIT for element: [id="delivery-time-intervals-select"]
+14-04-2026 17:20:26 | INFO | --------------------------------
+14-04-2026 17:20:26 | INFO | METHOD Fill email
+14-04-2026 17:20:26 | INFO | --------------------------------
+14-04-2026 17:20:26 | INFO | TYPE 'feliks2014@example.com' into [id="client_email"]
+14-04-2026 17:20:26 | INFO | WAIT for clickable: [id="client_email"]
+14-04-2026 17:20:26 | INFO | --------------------------------
+14-04-2026 17:20:26 | INFO | METHOD Select notifications
+14-04-2026 17:20:26 | INFO | --------------------------------
+14-04-2026 17:20:26 | INFO | MULTI-CLICK on element: .co-toggable_field[for="client_messenger_subscription"]
+14-04-2026 17:20:26 | INFO | WAIT for element: .co-toggable_field[for="client_messenger_subscription"]
+14-04-2026 17:20:26 | INFO | SCROLL to element
+14-04-2026 17:20:26 | INFO | CLICK on element: .co-toggable_field[for="client_messenger_subscription"]
