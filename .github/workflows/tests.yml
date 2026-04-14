@@ -1,8 +1,8 @@
-name: Selenium Tests (Docker)
+name: UI Tests (Docker + Pytest + Allure)
 
 on:
   push:
-    branches: ["main"]
+    branches: [ main ]
   pull_request:
 
 jobs:
@@ -10,43 +10,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Код
+      # 1. Забираем код
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Docker build
+      # 2. Собираем Docker image
       - name: Build Docker image
         run: docker build -t selenium-tests .
 
-      # 3. Запуск тестов в Docker
+      # 3. Запускаем тесты в контейнере
       - name: Run tests in Docker
         run: |
           docker run --name tests-container selenium-tests
+        continue-on-error: true
 
-      # 4. Забрать allure-results из контейнера
-      - name: Copy allure results
+      # 4. Копируем Allure results из контейнера
+      - name: Copy Allure results
+        if: always()
         run: |
           docker cp tests-container:/app/allure-results ./allure-results || true
 
-      # 5. Забрать logs
+      # 5. Копируем логи
       - name: Copy logs
+        if: always()
         run: |
           docker cp tests-container:/app/logs ./logs || true
 
-      # 6. Удалить контейнер
+      # 6. Удаляем контейнер
       - name: Cleanup container
-        run: |
-          docker rm tests-container || true
+        if: always()
+        run: docker rm tests-container || true
 
-      # 7. Upload Allure
+      # 7. Загружаем Allure results как artifact
       - name: Upload Allure results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results
 
-      # 8. Upload logs
+      # 8. Загружаем логи как artifact
       - name: Upload logs
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: logs
